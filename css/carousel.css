@@ -4,24 +4,49 @@
     justify-content: left;
     align-items: center;
     gap: 10px;
-}
 
-.carousel-button-next {
-    svg {
-        rotate: 180deg;
+    .carousel-button-prev {
+        cursor: pointer;
+    }
+
+    .carousel-button-next {
+        cursor: pointer;
+
+        svg {
+            rotate: 180deg;
+        }
     }
 }
 
 .swiper {
     width: 100%;
-    max-width: 800px;
+    max-width: 910px;
     height: 100%;
     margin: 0;
-}
 
-.swiper-slide img {
-    display: block;
-    width: 427px;
-    height: 432px;
-    object-fit: contain;
+    .swiper-wrapper {
+        .swiper-slide {
+            height: 500px;
+
+            img {
+                display: block;
+                width: 427px;
+                height: 432px;
+                object-fit: contain;
+            }
+        }
+
+        .swiper-slide:nth-child(1n) {
+            position: relative;
+        }
+
+        .swiper-slide:nth-child(2n) {
+            position: relative;
+
+            a {
+                position: absolute;
+                bottom: 0;
+            }
+        }
+    }
 }
