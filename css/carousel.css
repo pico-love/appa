@@ -1,0 +1,27 @@
+.carousel-container {
+    margin-top: 24px;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    gap: 10px;
+}
+
+.carousel-button-next {
+    svg {
+        rotate: 180deg;
+    }
+}
+
+.swiper {
+    width: 100%;
+    max-width: 800px;
+    height: 100%;
+    margin: 0;
+}
+
+.swiper-slide img {
+    display: block;
+    width: 427px;
+    height: 432px;
+    object-fit: contain;
+}
