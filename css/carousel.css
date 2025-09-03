@@ -22,30 +22,57 @@
     width: 100%;
     max-width: 910px;
     height: 100%;
-    margin: 0;
 
     .swiper-wrapper {
         .swiper-slide {
-            height: 500px;
+            height: auto;
 
             img {
                 display: block;
-                width: 427px;
+                width: 100%;
                 height: 432px;
-                object-fit: contain;
+                object-fit: cover;
             }
         }
 
         .swiper-slide:nth-child(1n) {
-            position: relative;
+            position: inherit;
         }
 
         .swiper-slide:nth-child(2n) {
-            position: relative;
+            position: inherit;
 
             a {
-                position: absolute;
-                bottom: 0;
+                position: inherit;
+                bottom: inherit;
+            }
+        }
+    }
+
+    @media (width >= 1024px) {
+        margin: 0;
+
+        .swiper-wrapper {
+            .swiper-slide {
+                height: 500px;
+
+                img {
+                    width: 427px;
+                    height: 432px;
+                }
+            }
+
+            .swiper-slide:nth-child(1n) {
+                position: relative;
+            }
+
+            .swiper-slide:nth-child(2n) {
+                position: relative;
+    
+                a {
+                    position: absolute;
+                    bottom: 0;
+                }
             }
         }
     }
